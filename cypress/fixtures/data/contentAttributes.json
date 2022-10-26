@@ -1,0 +1,25 @@
+{
+    "comments": {
+        "*": ""
+    },
+    "AUTO Create Currency 1": {
+        "name": "AUTO Create Currency",
+        "isRequired": true,
+        "showInList": true,
+        "includeInExport": true,
+        "reindexAllContent": true,
+        "type": "Currency",
+        "currencyCode": "USD",
+        "defaultValue": "100.32"
+    },
+    "AUTO Update Currency 1": {
+        "name": "AUTO Update Currency",
+        "isRequired": false,
+        "showInList": true,
+        "includeInExport": false,
+        "reindexAllContent": true,
+        "type": "Currency",
+        "currencyCode": "USD",
+        "defaultValue": "32.01"
+    }
+}

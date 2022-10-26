@@ -1,0 +1,41 @@
+{
+    "comments": {
+        "*": ""
+    },
+    "AUTO Standard Project Type 1": {
+        "name": "AUTO Standard Project Type 1",
+        "reviewCycle": "none",
+        "workflowStates": [
+            {
+                "name": "Default Step",
+                "group": "AUTO Standard Group 1",
+                "canEdit": true,
+                "canPublish": true
+            }
+        ]
+    },
+    "AUTO Create Project Type 1": {
+        "name": "AUTO Create Project Type 1",
+        "reviewCycle": "quarterly",
+        "workflowStates": [
+            {
+                "name": "workflow step name",
+                "group": "",
+                "canEdit": true,
+                "canPublish": false
+            }
+        ]
+    },
+    "AUTO Update Project Type 1": {
+        "name": "AUTO Update Project Type 1",
+        "reviewCycle": "quarterly",
+        "workflowStates": [
+            {
+                "name": "new workflow step name",
+                "group": "",
+                "canEdit": true,
+                "canPublish": true
+            }
+        ]
+    }
+}

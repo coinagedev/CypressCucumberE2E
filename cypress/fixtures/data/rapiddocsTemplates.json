@@ -1,0 +1,16 @@
+{
+    "comments": {
+        "": ""
+    },
+    "AUTO Create RapidDocs Template 1": {
+        "title": "AUTO Create RapidDocs Template 1",
+        "description": "Some random description",
+        "documentName": "My Document Name",
+        "file": "RapidDocs US Letter.docx"
+    },
+    "AUTO RapidDocs Questionnaire": {
+        "section": "AUTO RapidDocs Template Section",
+        "question": "AUTO RapidDocs Template Question",
+        "comment": "AUTO RapidDocs Template Comment"
+    }
+}

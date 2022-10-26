@@ -1,0 +1,153 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2021-08-04T06:00:24.371Z",
+    "end": "2021-08-04T06:01:00.247Z",
+    "duration": 33842,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6ede24ae-7d43-46bf-95b9-d52d583969fc",
+      "title": "",
+      "fullFile": "cypress/integration/RD20-1801-Search-Content-Deletion.js",
+      "file": "cypress/integration/RD20-1801-Search-Content-Deletion.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7bd0a214-ed29-4131-8cf1-c417dcff0fc5",
+          "title": "Contant Management Enhancement",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "RD20-1801: Verify Content Deletion From Search Reasult",
+              "fullTitle": "Contant Management Enhancement RD20-1801: Verify Content Deletion From Search Reasult",
+              "timedOut": null,
+              "duration": 33416,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"assets/${Cypress.spec.name}/${screenshotFileName}\"",
+              "code": "expect(cy).property('xpath').to.be.a('function'); // Expand Libraries to select one for adding new content within it \ncy.wait(5000);\ncy.get(controlCenter.navigateControlCenterOptions).contains('Libraries', {\n  timeout: 3000\n}).click({\n  force: true\n}).then(() => {\n  cy.get(controlCenter.navigateControlCenterOptions).contains('shahed test', {\n    timeout: 3000\n  }).click({\n    force: true\n  }).then(() => {\n    // Stage Summary\n    cy.get('img[alt=\"Add\"]', {\n      timeout: 3000\n    }).click().then(() => {\n      // Select question/topics\n      cy.get('input[name=topic').type('Deletion Content Test'); // Select Content type \n      cy.get('#mui-component-select-contentType').click({\n        force: true\n      });\n      cy.xpath('//body/div[@id=\"menu-contentType\"]').contains('Shahed T1').click({\n        force: true\n      }); //Selecting Library\n      cy.get('#mui-component-select-library', {\n        timeout: 3000\n      }).click({\n        force: true\n      });\n      cy.get('.Mui-selected').contains('shahed test').click(); // Selecting SME\n      cy.get('#mui-component-select-sme', {\n        timeout: 5000\n      }).click({\n        force: true\n      });\n      cy.xpath('//body/div[@id=\"menu-sme\"]', {\n        timeout: 3000\n      }).contains('Ali, MDShahed').click({\n        force: true\n      }); // Selecting review Cycle\n      cy.get('#mui-component-select-reviewCycle').click({\n        force: true\n      });\n      cy.contains('Bi-annual').click(); // Selecting Attribute Profile\n      cy.get('#mui-component-select-attributeProfile').click({\n        force: true\n      });\n      cy.xpath('//body/div[@id=\"menu-attributeProfile\"]').contains('ABC').click();\n      cy.get('.MuiBox-root > form').contains('Next').click({\n        force: true\n      }); // Classification\n      cy.get('.MuiBox-root > form').contains('Next').click({\n        force: true\n      }); // Assignment Screen\n      cy.get('.MuiBox-root > form').contains('Next').click({\n        force: true\n      }); // Response phase\n      cy.get('textarea[name=text]').clear().type('Deletion enhancement Test'); // File Upload for test Content \n      const fixtureFile = 'RapidDocs US Letter.docx';\n      cy.get('input[name=\"file\"]').attachFile(fixtureFile); // Submition New Content to Lib\n      cy.get('.MuiBox-root > form', {\n        timeout: 10000\n      }).contains('Submit').click(); // Navigate Back to main Screen & perform Seach for New Added Content \n      cy.get('div[class=\"MuiNav-logoDiv\"]').click({\n        timeout: 5000\n      });\n      cy.wait(10000);\n      cy.get('input[placeholder=\"Search\"]', {\n        timeout: 5000\n      }).clear().type('Deletion Content Test').type('{enter}');\n      cy.wait(20000); // Verify New Content is visible & Perform Deletion\n      cy.reload();\n      cy.xpath('//td[contains(text(),\"Deletion Content Test\")]').then($td => {\n        if ($td.is(':visible')) {}\n      });\n      cy.xpath('//tbody/tr[1]/td[1]/span[1]/span[1]/input[1]').check();\n      cy.get('[alt=\"Delete\"]').click();\n      cy.xpath('//div[contains(text(),\"Are you sure you want to delete the selected content?\")]').should('have.text', 'Are you sure you want to delete the selected content? They cannot be retrieved once they have been deleted. This operation will remove links to any other entities');\n      cy.get('button[type=button]').contains('Yes').click({\n        force: true\n      }); // Navigate back to Lib & Re-verify the deleted content\n      cy.get('div[class=\"MuiNav-logoDiv\"]').click({\n        timeout: 5000\n      });\n      cy.wait(5000);\n      cy.get(controlCenter.navigateControlCenterOptions).contains('Libraries', {\n        timeout: 3000\n      }).click({\n        force: true\n      }).then(() => {\n        cy.get(controlCenter.navigateControlCenterOptions).contains('shahed test', {\n          timeout: 3000\n        }).click({\n          force: true\n        }).then(() => {\n          // Verify New content no longer available on Libraries after perform deletion on Search Result Screen\n          cy.reload();\n          cy.xpath('//i[contains(text(),\"No Records Found.\")]').then($td => {\n            if ($td.is(':visible')) {}\n          });\n        });\n      });\n    });\n  });\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 30000ms: Expected to find element: `input[type=\"email\"]`, but never found it.\n\nBecause this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Contant Management Enhancement`",
+                "estack": "AssertionError: Timed out retrying after 30000ms: Expected to find element: `input[type=\"email\"]`, but never found it.\n\nBecause this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Contant Management Enhancement`\n    at Credentital.get Email [as Email] (https://automation1.rocketdocstest.com/__cypress/tests?p=cypress\\integration\\RD20-1801-Search-Content-Deletion.js:409:15)\n    at Context.eval (https://automation1.rocketdocstest.com/__cypress/tests?p=cypress\\integration\\RD20-1801-Search-Content-Deletion.js:136:28)",
+                "diff": null
+              },
+              "uuid": "6eb68e49-73b8-49f2-9749-c8b5fe20753b",
+              "parentUUID": "7bd0a214-ed29-4131-8cf1-c417dcff0fc5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "6eb68e49-73b8-49f2-9749-c8b5fe20753b"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 33416,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "ddcb00d5-a670-4ca4-85aa-453d64291558",
+      "title": "",
+      "fullFile": "cypress/integration/RD20-1910-TaxonomyTag.js",
+      "file": "cypress/integration/RD20-1910-TaxonomyTag.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "An uncaught error was detected outside of a test",
+          "fullTitle": "An uncaught error was detected outside of a test",
+          "timedOut": null,
+          "duration": 426,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": "\"assets/${Cypress.spec.name}/${screenshotFileName}\"",
+          "code": "throw err;",
+          "err": {
+            "message": "ReferenceError: The following error originated from your test code, not from Cypress.\n\n  > Projects is not defined\n\nWhen Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n\nCypress could not associate this error to any specific test.\n\nWe dynamically generated a new test to display this failure.",
+            "estack": "ReferenceError: The following error originated from your test code, not from Cypress.\n\n  > Projects is not defined\n\nWhen Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n\nCypress could not associate this error to any specific test.\n\nWe dynamically generated a new test to display this failure.\n    at Suite.eval (https://automation1.rocketdocstest.com/__cypress/tests?p=cypress\\integration\\RD20-1910-TaxonomyTag.js:132:20)\n    at Object../cypress/integration/RD20-1910-TaxonomyTag.js (https://automation1.rocketdocstest.com/__cypress/tests?p=cypress\\integration\\RD20-1910-TaxonomyTag.js:129:1)\n    at __webpack_require__ (https://automation1.rocketdocstest.com/__cypress/tests?p=cypress\\integration\\RD20-1910-TaxonomyTag.js:20:30)\n    at Object.0 (https://automation1.rocketdocstest.com/__cypress/tests?p=cypress\\integration\\RD20-1910-TaxonomyTag.js:1127:18)\n    at __webpack_require__ (https://automation1.rocketdocstest.com/__cypress/tests?p=cypress\\integration\\RD20-1910-TaxonomyTag.js:20:30)\n    at eval (https://automation1.rocketdocstest.com/__cypress/tests?p=cypress\\integration\\RD20-1910-TaxonomyTag.js:84:18)\n    at eval (https://automation1.rocketdocstest.com/__cypress/tests?p=cypress\\integration\\RD20-1910-TaxonomyTag.js:87:10)\n    at eval (<anonymous>)",
+            "diff": null
+          },
+          "uuid": "5deba553-3994-4d21-81d4-94dcfd27c888",
+          "parentUUID": "ddcb00d5-a670-4ca4-85aa-453d64291558",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [],
+      "failures": [
+        "5deba553-3994-4d21-81d4-94dcfd27c888"
+      ],
+      "pending": [],
+      "skipped": [],
+      "duration": 426,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome-report",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+    "comments": {
+        "*": "This data is for modeling data needed in the forms on the system tool/migration tool page.",
+        "importType": "This is not actually a form field, but it indicates which import we are doing on the system tool page."
+    },
+    "AUTO Create Import 1": {
+        "importType": "user",
+        "attachment": "RapidDocs US Letter.docx"
+    }
+}

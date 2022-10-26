@@ -1,0 +1,17 @@
+{
+    "comments": {
+        "*": ""
+    },
+    "AUTO Create External File 1": {
+        "title": "AUTO Create External File 1",
+        "file": "random-data.txt",
+        "description": "Some random description.",
+        "category": "AUTO Standard External File Category 1"        
+    },
+    "AUTO Update External File 1": {
+        "title": "AUTO Update External File 1",
+        "file": "random-data.txt",
+        "description": "Some other random description.",
+        "category": "AUTO Standard External File Category 1"        
+    }
+}

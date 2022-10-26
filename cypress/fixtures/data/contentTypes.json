@@ -1,0 +1,44 @@
+{
+    "comments": {
+        "*": ""
+    },
+    "AUTO Standard Content Type 1": {
+        "name": "AUTO Standard Content Type 1",
+        "reviewCycle": "quarterly",
+        "workflowStates": [
+            {
+                "name": "standard workflow 123",
+                "group": "",
+                "canEdit": true,
+                "canPublish": true,
+                "requiresApproval": false
+            }
+        ]
+    },
+    "AUTO Create Content Type 1": {
+        "name": "AUTO Create Content Type 1",
+        "reviewCycle": "quarterly",
+        "workflowStates": [
+            {
+                "name": "workflow step name",
+                "group": "",
+                "canEdit": true,
+                "canPublish": false,
+                "requiresApproval": true
+            }
+        ]
+    },
+    "AUTO Update Content Type 1": {
+        "name": "AUTO Update Content Type 1",
+        "reviewCycle": "quarterly",
+        "workflowStates": [
+            {
+                "name": "new workflow step name",
+                "group": "",
+                "canEdit": true,
+                "canPublish": true,
+                "requiresApproval": false
+            }
+        ]
+    }
+}

@@ -1,0 +1,26 @@
+{
+   "baseUrl": "https://localhost:5001",
+   "chromeWebSecurity": false,
+   "video": false,
+   "numTestsKeptInMemory": 0,
+   "requestTimeout": 30000,
+   "responseTimeout": 30000,
+   "defaultCommandTimeout": 30000,
+   "projectId": "Rocketdocs 2.0",
+   "reporter": "mochawesome",
+   "retries": {
+      "runMode": 0,
+      "openMode": 0
+   },
+   "viewportWidth": 1300,
+   "viewportHeight": 858,
+   "reporterOptions": {
+      "reportDir": "cypress/reports/mochawesome-report",
+      "overwrite": false,
+      "html": false,
+      "json": true,
+      "timestamp": "mmddyyyy_HHMMss"
+   },
+   "screenshotsFolder": "cypress/reports/mochawesome-report/assets",
+   "testFiles": "**/*.feature"
+}

@@ -1,0 +1,23 @@
+{
+    "comments": {
+        "*": ""
+    },
+    "AUTO Standard Library 1": {
+        "name": "AUTO Standard Library 1",
+        "groups": ["AUTO Standard Group 1"],
+        "defaultContentType": "AUTO Standard Content Type 1",
+        "isDefault": false
+    },
+    "AUTO Create Library 1": {
+        "name": "AUTO Create Library 1",
+        "groups": ["AUTO Standard Group 1"],
+        "defaultContentType": "@myContentTypeAlias",
+        "isDefault": false
+    },
+    "AUTO Update Library 1": {
+        "name": "AUTO Update Library 1",
+        "groups": ["AUTO Standard Group 1"],
+        "defaultContentType": "@myContentTypeAlias",
+        "isDefault": true
+    }
+}

@@ -1,0 +1,31 @@
+image: node:12
+# RD20 Cypress test execution disable for tentative purpose
+options:
+  max-time: 30
+pipelines:
+  default:
+  - step:
+      name: Install project dependencies
+      caches:
+        - npm
+      script:
+        - npm install
+  # - step:
+  #     name: RD20 Cypress Test Execution
+  #     caches:
+  #       - npm
+  #       - cypress
+  #     image: cypress/base:10
+  #     script:
+  #       - npm i xvfb
+  #       - npm i cypress
+  #       - npx cypress-tags run -e TAGS='@SETUP' --config-file automation-config.json
+  #       - npm run cucumber:report
+  #     artifacts:
+    # store any generates images and videos as artifacts
+        # - cypress/screenshots/**
+        # - cypress/videos/**
+definitions:
+  caches:
+    npm: $HOME/.npm
+    cypress: $HOME/.cache/Cypress

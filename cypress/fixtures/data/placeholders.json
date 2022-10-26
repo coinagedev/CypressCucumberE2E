@@ -1,0 +1,13 @@
+{
+    "comments": {
+        "*": ""
+    },
+    "AUTO Create Placeholder 1": {
+        "name": "AUTO Create Placeholder 1",
+        "value": "test"
+    },
+    "AUTO Update Placeholder 1": {
+        "name": "AUTO Update Placeholder 1",
+        "value": "other"
+    }
+}

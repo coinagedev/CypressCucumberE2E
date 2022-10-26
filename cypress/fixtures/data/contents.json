@@ -1,0 +1,26 @@
+{
+    "comments": {
+        "*": ""
+    },
+    "AUTO Create Content 1": {
+        "attributeProfile": "AUTO Standard Profile 1",
+        "topic": "AUTO Create Content 1",
+        "contentType": "AUTO Standard Content Type 1",
+        "library": "AUTO Standard Library 1",
+        "language": "",
+        "relatedContent": "",
+        "sme": "Bot, AUTO",
+        "owner": "Bot, AUTO",
+        "dueDate": "",
+        "reviewCycle": "monthly",
+        "responseType": "now",
+        "summary": "Some random summary.",
+        "text": "Some random text.",
+        "file": "RapidDocs US Letter.docx",
+        "isPublished": true
+    },
+    "AUTO Update Content 1": {
+        "owner": "Bot, AUTO",
+        "sme": "Bot, AUTO"
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "comments": {
+        "*": ""
+    },
+    "AUTO Standard Group 1": {
+        "name": "AUTO Standard Group 1",
+        "privileges.CanAccessContentSettings": true,
+        "privileges.CanAccessProjectSettings": true,
+        "privileges.CanAccessRapidDocsAdmin": true,
+        "privileges.CanAccessReports": true,
+        "privileges.CanAccessSystemSettings": true,
+        "privileges.CanAccessUsers": true
+    },
+    "AUTO Create Group 1": {
+        "name": "AUTO Create Group 1",
+        "privileges.CanAccessContentSettings": true,
+        "privileges.CanAccessProjectSettings": false,
+        "privileges.CanAccessRapidDocsAdmin": true,
+        "privileges.CanAccessReports": false,
+        "privileges.CanAccessSystemSettings": true,
+        "privileges.CanAccessUsers": false
+    },
+    "AUTO Update Group 1": {
+        "name": "AUTO Update Group 1",
+        "privileges.CanAccessContentSettings": false,
+        "privileges.CanAccessProjectSettings": true,
+        "privileges.CanAccessRapidDocsAdmin": false,
+        "privileges.CanAccessReports": true,
+        "privileges.CanAccessSystemSettings": true,
+        "privileges.CanAccessUsers": true
+    }
+}

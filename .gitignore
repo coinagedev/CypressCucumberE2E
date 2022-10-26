@@ -1,0 +1,22 @@
+# dependencies
+node_modules
+
+#testing
+.idea/*
+screenshots/
+*.env.json
+.iml
+/cucumber-json/*
+cucumber_report.html
+cucumber_report.html.json
+cypress/screenshots
+cypress/videos/*
+cypress/reports/*
+cypress/downloads/*
+
+# Some input files are auto generated so git tracking would be annoying
+cypress/files/random-data.txt
+
+# misc
+.DS_Store
+npm-debug.log*

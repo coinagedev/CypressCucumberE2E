@@ -1,0 +1,17 @@
+{
+    "comments": {
+        "*": ""
+    },
+    "AUTO Create Project 1": {
+        "title": "AUTO Create Project 1",
+        "projectType": "AUTO Standard Project Type 1",
+        "client": "Test Client",
+        "attributeProfile": "AUTO Standard Profile 1",
+        "reviewCycle": "none",
+        "dueDate": "12/01/2022",
+        "note": "Some random note",
+        "file": "RapidDocs US Letter.docx",
+        "parseOnCreate": true,
+        "autofill": true
+    }
+}
